@@ -1,0 +1,13 @@
+.header	{
+	padding: 20px
+}
+
+.header a {
+	font-weight: bold;
+	margin: 0px 10px;
+	color: #51a5ff;
+}
+
+.header .active {
+	color: #007bff;
+}

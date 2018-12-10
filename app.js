@@ -10,19 +10,22 @@ testApp.config(function($stateProvider) {
   var formState = {
     name: 'form',
     url: '/form',
-    template: '<h3>form</h3>'
+    templateUrl: 'pages/form.html',
+    controller:'FormCtrl'
   }
 
   var mapState = {
     name: 'map',
     url: '/map',
-    templateUrl: 'pages/map.html'
+    templateUrl: 'pages/map.html',
+    controller:'MapCtrl'
   }
 
   var csvState = {
     name: 'csv',
     url: '/csv',
-    template: '<h3>CSV</h3>'
+    templateUrl: 'pages/csv.html',
+    controller:'CsvCtrl'
   }
 
   var integrationState = {
@@ -37,3 +40,4 @@ testApp.config(function($stateProvider) {
   $stateProvider.state(csvState);
   $stateProvider.state(integrationState);
 });
+
