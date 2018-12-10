@@ -1,0 +1,88 @@
+.integration-container {
+	background-color: #e8e5e6;
+	padding: 50px;
+}
+
+h1, h2, h3 {
+	font-family: 'Noto Serif TC', serif;
+}
+
+h1 {
+	color: #de4e5b;
+	font-family: serif;
+	text-align: center;
+	margin: 40px 0;
+	font-weight: bold;
+}
+
+.content-card {
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.basket-total {
+	margin: 20px 0;
+}
+
+.basket-total p {
+	font-family: serif;
+}
+
+.basket-total p img {
+	height: 50px;
+	margin-right: 10px;
+}
+
+.basket-total__price {
+	font-size: 1.8rem;
+	font-weight: bold;
+    color: #e25766;
+    background-color: #f3f2f2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.basket-items__title {
+	font-size: .8rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.basket-item {
+	font-family: serif;
+	background: #e8e5e6;
+	border:none;
+	text-align: center;
+    width: 100%;
+    align-items: center;
+    margin-top: 15px;
+    padding: 3px;	
+}
+
+.basket-item img {
+    margin-top: -15px;	
+    width: 30px;
+}
+
+.basket-item__text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;	
+}
+
+.basket-item__title {
+	font-size: 0.8rem;
+    margin: 5px 0px;	
+}
+
+.basket-item__price {
+	font-weight: bold;
+	color: #de4e5b;
+}
+
+p.basket_item__price {
+	color: red;
+}
