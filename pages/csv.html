@@ -21,5 +21,12 @@
 			<td ng-repeat="(key, value) in row">{{value}}</td>
 		</tr>
 	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="5" class="text-center">
+				<div st-pagination="" st-items-by-page="5" st-displayed-pages="7"></div>
+			</td>
+		</tr>
+	</tfoot>
 </table>
 <div>{{fileContent}}</div>
