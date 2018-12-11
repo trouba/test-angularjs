@@ -1,4 +1,5 @@
-var testApp = angular.module('testApp', ['ui.router']);
+var testApp = angular.module('testApp', ['ui.router', 'smart-table']);
+
 
 testApp.config(function($stateProvider) {
   var formState = {
@@ -33,4 +34,3 @@ testApp.config(function($stateProvider) {
   $stateProvider.state(csvState);
   $stateProvider.state(integrationState);
 });
-

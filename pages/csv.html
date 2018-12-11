@@ -1,1 +1,25 @@
 <p>{{testvalue}}</p>
+<p>Load a csv file with a ; seprator</p>
+<input type="file" file-reader="fileContent" />
+
+
+<table st-table="displayedCollection" class="table table-striped" st-safe-src="fileContent">
+	<thead>
+	<tr>
+		{{this[key]}}
+		<th ng-repeat="(key, value) in displayedCollection[0]" st-sort="{{key}}">{{key}}</th>
+	</tr>
+	<tr>
+
+		<th ng-repeat="(key, value) in displayedCollection[0]">
+			<input st-search="{{key}}" placeholder="search for {{ key }}" class="input-sm form-control" type="search"/>
+		</th>
+	</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="row in displayedCollection" ng-if="$index > 0">
+			<td ng-repeat="(key, value) in row">{{value}}</td>
+		</tr>
+	</tbody>
+</table>
+<div>{{fileContent}}</div>
