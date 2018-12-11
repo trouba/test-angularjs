@@ -1,15 +1,9 @@
 var testApp = angular.module('testApp', ['ui.router']);
 
 testApp.config(function($stateProvider) {
-  var homeState = {
-    name: 'home',
-    url: '/',
-    template: '<h3>Home</h3>'
-  }
-
   var formState = {
     name: 'form',
-    url: '/form',
+    url: '/',
     templateUrl: 'pages/form.html',
     controller:'FormCtrl'
   }
@@ -34,7 +28,6 @@ testApp.config(function($stateProvider) {
     templateUrl: 'pages/integration.html'
   }
 
-  $stateProvider.state(homeState);
   $stateProvider.state(formState);
   $stateProvider.state(mapState);
   $stateProvider.state(csvState);
