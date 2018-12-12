@@ -1,5 +1,5 @@
 testApp.controller('CsvCtrl', ['$scope', function($scope) {
-	$scope.testvalue = "csv view";
+	$scope.testvalue = "csv view";	
 }]);
 
 testApp.directive('fileReader', function() {
@@ -18,7 +18,7 @@ testApp.directive('fileReader', function() {
 				//clean headers to use smart-table
 				var headers = headers.map(function(header) {
 					newHeader = header.replace(/[^A-Z0-9]/ig, "_");;
-				  	return newHeader
+					return newHeader
 				});
 
 				for(var i=1;i<lines.length;i++){
