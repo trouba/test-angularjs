@@ -13,14 +13,38 @@ testApp.config(function($stateProvider) {
     name: 'map',
     url: '/map',
     templateUrl: 'pages/map.html',
-    controller:'MapCtrl'
+    controller:'MapCtrl',
+    resolve: {
+      user: function(userService, $q, $state) {
+        var deferred = $q.defer();
+        if (userService.security()) {
+          deferred.resolve({});
+        } else {
+          deferred.reject('no user')
+          $state.go('form')
+        }
+        return deferred.promise;
+      } 
+    }
   }
 
   var csvState = {
     name: 'csv',
     url: '/csv',
     templateUrl: 'pages/csv.html',
-    controller:'CsvCtrl'
+    controller:'CsvCtrl',
+    resolve: {
+      user: function(userService, $q, $state) {
+        var deferred = $q.defer();
+        if (userService.security()) {
+          deferred.resolve({});
+        } else {
+          deferred.reject('no user')
+          $state.go('form')
+        }
+        return deferred.promise;
+      } 
+    }
   }
 
   var integrationState = {
@@ -34,3 +58,10 @@ testApp.config(function($stateProvider) {
   $stateProvider.state(csvState);
   $stateProvider.state(integrationState);
 });
+
+
+// Silence $state.go errors
+testApp.run(function($state) {
+  $state.defaultErrorHandler(function(error) {
+  });
+})

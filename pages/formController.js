@@ -1,12 +1,11 @@
-testApp.controller('FormCtrl', ['$scope', function($scope) {
+testApp.controller('FormCtrl', ['$scope', 'userService', function($scope, userService) {
 
-	localStorage.getItem('user') === null ? $scope.user = {} : $scope.user = JSON.parse(localStorage.getItem('user'))
+	var self = this;
+
+  	self.user = userService;
+  	$scope.user = self.user.load()
 
 	$scope.save = function(user) {
-		if (user.email !== undefined && user.name !== undefined) {
-			$scope.user = angular.copy(user);
-        	localStorage.setItem('user', JSON.stringify($scope.user));
-		}
-		
+		self.user.save(user)
   	};
 }]);
