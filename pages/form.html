@@ -4,6 +4,12 @@
 		<div class="col">
 			<div class="card">
 				<div class="card-body">
+					<div class="alert alert-warning" role="alert" ng-if="displayWarningMessage">
+					  You need to set a name and an email to continue
+					</div>
+					<div class="alert alert-success" role="alert" ng-if="displaySuccessMessage">
+					  User saved !
+					</div>
 					<form>
 						<div class="form-group">
 							<label for="">Name</label>
@@ -13,10 +19,10 @@
 							<label for="">Email</label>
 							<input class="form-control" type="text" ng-model="user.email">
 						</div>
-						<button type="submit" ng-click="save(user)" value="Save" class="btn btn-primary"/>Submit</button>
+						<button type="submit" ng-click="save(user)" value="Save" class="btn btn-primary"/>Save user</button>
 					</form>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>	
 </div>

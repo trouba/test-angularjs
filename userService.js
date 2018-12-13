@@ -8,7 +8,9 @@ angular.module('testApp').factory('userService', function(){
     if (user.email !== undefined && user.name !== undefined) {
       savedUser = angular.copy(user);
       localStorage.setItem('user', JSON.stringify(user));
+      return true
     }
+    return false
   }
 
   savedUser.security = function() {

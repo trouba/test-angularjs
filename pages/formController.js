@@ -6,6 +6,11 @@ testApp.controller('FormCtrl', ['$scope', 'userService', function($scope, userSe
   	$scope.user = self.user.load()
 
 	$scope.save = function(user) {
-		self.user.save(user)
+		if (!self.user.save(user)) {
+			$scope.displayWarningMessage = true;
+		} else {
+			$scope.displayWarningMessage = false;
+			$scope.displaySuccessMessage = true;
+		}
   	};
 }]);
