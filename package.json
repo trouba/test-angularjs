@@ -1,0 +1,8 @@
+{
+  "name": "test-angularjs",
+  "version": "1.0.0",
+  "description": "This is a simple AngularJS test project using angular [ui-router](https://ui-router.github.io/ng1/) and [smart-table](http://lorenzofox3.github.io/smart-table-website/).",
+  "dependencies": {
+    "angular-smart-table": "^2.1.11"
+  }
+}
